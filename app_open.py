@@ -3,8 +3,9 @@ import streamlit as st
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
 # Load pre-trained model and tokenizer
-model = GPT2LMHeadModel.from_pretrained("gpt2")
-tokenizer = GPT2Tokenizer.from_pretrained("gpt2")
+model = GPT2LMHeadModel.from_pretrained("gpt2-large")
+tokenizer = GPT2Tokenizer.from_pretrained("gpt2-large")
+pad_token_id = tokenizer.eos_token_id)
 
 # Set page title and favicon
 st.set_page_config(
